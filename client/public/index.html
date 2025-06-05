@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+
+    <script>
+      if (window.location.hostname === 'rdv.institutadios.com') {
+        window.location.href = 'https://rdv.sarahnacass.com' + window.location.pathname + window.location.search;
+      }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tarteaucitronjs/1.19.0/tarteaucitron.js" integrity="sha512-rVB1I2mKTuNzXSpRihvpiThlIPCJ0O5mywAtlKOV9VR5lnaffr5CZbpxxMcD/uxabzHl+nocgsPRPdeux0ED3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script type="text/javascript">
+      if (window.location.hostname === 'rdv.sarahnacass.com') {
+        
+        tarteaucitronCustomText = {
+          'middleBarHead' : '',
+        };
+        tarteaucitron.init({
+        "privacyUrl": "https://sarahnacass.com/mentions-legales/", /* Privacy policy url */
+        "bodyPosition": "top", /* or top to bring it as first element for accessibility */
+
+        "hashtag": "#consent_cookies", /* Open the panel with this hashtag */
+        "cookieName": "consent_cookies", /* Cookie name */
+
+        "orientation": "middle", /* Banner position (top - bottom) */
+
+        "groupServices": false, /* Group services by category */
+        "showDetailsOnClick": false, /* Click to expand the description */
+        "serviceDefaultState": "wait", /* Default state (true - wait - false) */
+
+        "showAlertSmall": false, /* Show the small banner on bottom right */
+        "cookieslist": false, /* Show the cookie list */
+
+        "closePopup": false, /* Show a close X on the banner */
+
+        "showIcon": false, /* Show cookie icon to manage cookies */
+        //"iconSrc": "", /* Optionnal: URL or base64 encoded image */
+        "iconPosition": "BottomRight", /* BottomRight, BottomLeft, TopRight and TopLeft */
+
+        "adblocker": false, /* Show a Warning if an adblocker is detected */
+
+        "DenyAllCta" : false, /* Show the deny all button */
+        "AcceptAllCta" : true, /* Show the accept all button when highPrivacy on */
+        "highPrivacy": true, /* HIGHLY RECOMMANDED Disable auto consent */
+
+        "handleBrowserDNTRequest": false, /* If Do Not Track == 1, disallow all */
+
+        "removeCredit": true, /* Remove credit link */
+        "moreInfoLink": false, /* Show more info link */
+
+        "useExternalCss": false, /* If false, the tarteaucitron.css file will be loaded */
+        "useExternalJs": false, /* If false, the tarteaucitron.js file will be loaded */
+
+        "cookieDomain": ".sarahnacass.com", /* Shared cookie for multisite */
+
+        "readmoreLink": "", /* Change the default readmore link */
+
+        "mandatory": true, /* Show a message about mandatory cookies */
+        "mandatoryCta": true, /* Show the disabled accept button when mandatory on */
+
+        //"customCloserId": "", /* Optional a11y: Custom element ID used to open the panel */
+
+        "googleConsentMode": true, /* Enable Google Consent Mode v2 for Google ads and GA4 */
+
+        "partnersList": false /* Show the number of partners on the popup/middle banner */
+        });
+      }
+
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script type="text/javascript">
+      tarteaucitron.user.googletagmanagerId = 'GTM-KGPPXVKS';
+      (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Analytics -->
+    <script type="text/javascript">
+      (tarteaucitron.job = tarteaucitron.job || []).push('gcmanalyticsstorage');
+    </script>
+    <!-- End Analytics -->
+
+    <!-- Advertising -->
+    <script type="text/javascript">
+      (tarteaucitron.job = tarteaucitron.job || []).push('gcmadstorage');
+    </script>
+    <!-- End Advertising -->
+
+    <!-- Personalized Advertising -->
+    <script type="text/javascript">
+      (tarteaucitron.job = tarteaucitron.job || []).push('gcmadsuserdata');
+    </script>
+    <!-- End Personalized Advertising -->
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+      tarteaucitron.user.clarity = 'qrmplatke5';
+      (tarteaucitron.job = tarteaucitron.job || []).push('clarity');
+    </script>
+    <!-- Microsoft Clarity -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fff" />
+    <title>Rendez-vous - sarahnacass</title>
+    <meta
+      name="description"
+      content="Réservez votre rendez-vous en ligne avec Sarah Nacass en quelques clics."
+    />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=2">
+    <link rel="manifest" href="/site.webmanifest?v=2">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=2" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicon.ico?v=2">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+  
+  </head>
+
+  <body>
+    <noscript>Vous devez activer JavaScript sur votre navigateur pour pouvoir accéder à la page de réservation de rendez-vous de Sarah Nacass.</noscript>
+    <div id="root"></div>
+  </body>
+</html>

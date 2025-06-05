@@ -1,0 +1,39 @@
+{
+  "name": "reactbooking",
+  "version": "1.5.0",
+  "description": "Page de réservation de : https://rdv.sarahnacass.com",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./index.js",
+    "start": "node ./index.js",
+    "git": "push_bot.bat",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://aronep6@bitbucket.org/bilidjo/reactbooking.git"
+  },
+  "author": "Ousmane Mbaye",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://bitbucket.org/bilidjo/reactbooking/issues"
+  },
+  "homepage": "https://bitbucket.org/bilidjo/reactbooking#readme",
+  "dependencies": {
+    "acuityscheduling": "^0.1.9",
+    "axios": "^0.26.1",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.17.3",
+    "firebase": "^10.12.3",
+    "firebase-admin": "^11.0.0",
+    "helmet": "^5.0.2",
+    "moment-timezone": "^0.5.44",
+    "stripe": "^10.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}

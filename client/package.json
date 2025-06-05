@@ -1,0 +1,64 @@
+{
+  "name": "RDV_ADDICTOLOGUE_COM",
+  "version": "2.0.0",
+  "private": true,
+  "dependencies": {
+    "@demark-pro/react-booking-calendar": "^4.0.3",
+    "@hookform/resolvers": "^2.9.8",
+    "@stripe/react-stripe-js": "^1.16.0",
+    "@stripe/stripe-js": "^1.46.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "axios": "^0.26.0",
+    "crypto": "^1.0.1",
+    "firebase": "^9.6.7",
+    "js-cookie": "^3.0.5",
+    "leaflet": "^1.9.3",
+    "mixpanel-browser": "^2.43.0",
+    "moment": "^2.29.4",
+    "moment-timezone": "^0.5.44",
+    "react": "^18.2.0",
+    "react-dates": "^21.8.0",
+    "react-dom": "^18.2.0",
+    "react-feather": "^2.0.9",
+    "react-hook-form": "^7.27.1",
+    "react-icons": "^5.0.1",
+    "react-leaflet": "^4.2.0",
+    "react-moment": "^1.1.1",
+    "react-router-dom": "^6.14.2",
+    "react-scripts": "^5.0.0",
+    "web-vitals": "^1.0.1",
+    "yup": "^0.32.11"
+  },
+  "scripts": {
+    "dev": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.1",
+    "postcss": "^8.4.5",
+    "sass": "^1.47.0",
+    "tailwindcss": "^3.0.8"
+  }
+}

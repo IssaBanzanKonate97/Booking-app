@@ -1,0 +1,6 @@
+.flexTimeInfos{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    flex: 1 0 0%;
+}

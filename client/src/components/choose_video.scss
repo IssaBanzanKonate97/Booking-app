@@ -1,0 +1,51 @@
+.chooseVideoContainer{
+    overflow: hidden;
+    position: relative;
+}
+
+.pandemic {
+    position: absolute;
+    height: 105px;
+    bottom: -1px ; right: -5px;
+    z-index: 20;
+    animation: insert-from-bottom 890ms ease-out;
+}
+
+.right-para-shoot{
+    z-index: 10;
+    position: absolute;
+    right: -540px; bottom: -10px;
+    transform: rotate(-16deg);
+    background-color: var(--red-light-clr);
+    height: 130px;
+    width: 900px;
+    // animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: right-para-shoot 1.4s;
+}
+.closeInformativeButton{
+    z-index: 25;
+    position: absolute;
+    top: 15px; right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+}
+
+@keyframes right-para-shoot {
+    from{
+        opacity: 0.3;
+        transform: translateX(135px) rotate(-90deg);
+    } to {
+        opacity: 1;
+        transform: translateX(0px) rotate(-16deg);
+    }
+}
+
+@keyframes insert-from-bottom {
+    from {
+        transform: translateY(100%);
+    } to {
+        transform: translateY(0px);
+    }
+}

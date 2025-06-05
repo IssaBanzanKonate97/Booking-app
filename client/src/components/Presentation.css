@@ -1,0 +1,17 @@
+.display-text {
+  max-height: 16em;
+  overflow: hidden;
+}
+
+.text {
+  font-family: "Roboto";
+  font-size: 14px;
+  white-space: pre-wrap;
+  line-height: 22px;
+  margin-bottom: 0.9em;
+}
+
+.show-text {
+  overflow: inherit;
+  max-height: inherit;
+}

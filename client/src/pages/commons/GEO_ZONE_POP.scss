@@ -1,0 +1,70 @@
+.geomodal{
+    & input{
+        &:focus { outline: none; } 
+    }
+    &-select{
+        /* &:hover{
+            transform: scale(1.02);
+        } */
+    } 
+    &-fullscreen{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        left: 0; top: 0;
+        z-index: 999;
+        background-color: rgba(19, 24, 39, 0.85);
+        animation: openingGeomodal-fullscreen 580ms 1;
+        &-framed{
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+        }
+    }
+    &-modal{
+        display: flex;
+        z-index: 999;
+        // margin: -30px 0 0 0;
+        min-height: 480px;
+        animation: openingGeomodal-modal 290ms 1;
+        &-framed{
+            width: 100% !important;
+            height: 100% !important;
+        }
+    }
+}
+.animate-to-right{
+    animation: animate-to-right 150ms 1 ;
+}
+@keyframes openingGeomodal-fullscreen {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes openingGeomodal-modal {
+    from { transform: translateY(35px); opacity: .5; }
+    to { transform: translateY(0px); opacity: 1; }
+}
+@keyframes animate-to-right {
+    from { transform: rotate(0deg);}
+    to { transform: rotate(45deg);} 
+}
+.height-select-type {
+    min-height: 5em;
+}
+.residential-link:hover {
+    color: blue !important;
+    text-decoration: underline;
+}
+
+.resp {
+    display: flex;
+}
+
+@media (max-width: 1023px) {
+    .resp {
+        display: none !important;
+    }
+}
