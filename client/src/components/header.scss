@@ -1,0 +1,111 @@
+.headerWideScan{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.adiosTeamScan{
+  height: 140px;
+  width: 140px;
+  border-radius: 8%;
+  z-index: 2;
+}
+.etablissementScan{
+  line-height: 35px;
+  /*font-size: 26px;*/
+}
+.ulScanShift{
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.fullHeaderNavbarSticked{
+  transition: all 180ms;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 1px 14px 0 rgb(43 70 96 / 18%);
+}
+.fullHeaderNavbarFixed{
+  z-index: 30;
+  transition: all 180ms;
+  position: fixed;
+  top: 0; left: 0;
+}
+.fullHeaderNavbarFixed ul{
+  transition: all 180ms;
+  margin: 0;
+}
+.navbarMarginForce{
+  margin-bottom: 70px;
+}
+
+.navigationBarScan{
+  height: 60px;
+}
+.profileWrapperScan{
+  max-width: 1200px;
+  height: 180px;
+  max-height: 180px;
+}
+
+.profileOverlayScan{
+  position: relative;
+  height: 120px;
+  max-height: 120px;
+  background: rgb(51,60,78);
+  background: -moz-linear-gradient(180deg, rgba(51,60,78,1) 0%, rgba(38,44,57,1) 100%);
+  background: -webkit-linear-gradient(180deg, rgba(51,60,78,1) 0%, rgba(38,44,57,1) 100%);
+  background: linear-gradient(180deg, rgba(51,60,78,1) 0%, rgba(38,44,57,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#333c4e",endColorstr="#262c39",GradientType=1);
+}
+
+.profileOverlayText{
+  display: flex;
+  flex-direction: column;
+}
+
+.profileOverlayScan-backgroundImage{
+  display: none;
+}
+
+.openingAnimation{
+  animation: openingAnimationKeyframes 260ms 1;
+}
+
+@keyframes openingAnimationKeyframes {
+  from {
+    transform: scale(.8);
+    opacity: .8;
+  } to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .profileOverlayScan{
+    height: 144px;
+    max-height: 144px;
+  }
+  .profileOverlayScan-backgroundImage {
+    display: block;
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+
+    background-image: url("../img/logo-Sarah-Nacass-Jaune_Blanc-sans-fond.webp");
+    background-position: center;
+    background-size: cover;
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
+  }
+
+  .profileOverlayText{
+    z-index: 3;
+    position: absolute;
+    display: flex;
+    font-weight: 500;
+    margin: 10px 0 0;
+    flex-direction: column;
+  }
+}

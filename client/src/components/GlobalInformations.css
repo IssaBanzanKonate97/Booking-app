@@ -1,0 +1,41 @@
+.center-title {
+  font-family: "Montserrat", arial, sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  margin: 0 0 16px;
+  font-weight: 500;
+}
+
+.small-title {
+  font-weight: bold;
+  font-size: 14px;
+  text-align: left;
+  margin-top: 20px;
+}
+
+p {
+  text-align: left;
+  margin: 0;
+}
+
+.spacer {
+  padding-right: 80px;
+}
+
+.globalInformationsInfos{
+  line-height: 24px;
+  margin: 0 0 16px;
+}
+
+.globalInformationsInfos h3{
+  line-height: 24px;
+  margin: 0;
+  font-weight: bold;
+}
+
+#mfffffap{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}

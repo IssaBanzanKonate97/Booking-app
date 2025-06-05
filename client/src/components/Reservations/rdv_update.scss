@@ -1,0 +1,204 @@
+.rdvBoxStructure {
+    flex: 4;
+    display: flex;
+    margin-bottom: 16px;
+    margin-top: -100px;
+    z-index: 50 !important;
+    border-radius: 0.375rem 0.375rem;
+    max-height: 835px;
+    justify-content: flex-end;
+    flex-direction: column;
+    max-width: 405px;
+    width: 405px;
+    justify-content: flex-start;
+    transition: all 180ms;
+    overflow-x: hidden;
+    border: 1px;
+    transition: all .5s linear;
+    overscroll-behavior: contain; // Pour éviter le "overscroll" sur mobile 
+    & {
+        z-index: 60 ;
+    }
+}
+.actionsContainersWrapper{
+    transition: all .5s linear;
+    overflow-y: auto;
+    animation: openingActionsContainers 180ms;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+.activeTracker{
+    display: flex;
+    flex-direction: row;
+    transition: all 180ms;
+    position: relative;
+    overflow: hidden;
+    &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        margin: 0; left: 0; top: 4px;
+        height: calc(100% - 8px);
+        border-radius: 30px;
+        width: 3px;
+        max-width: 3px;
+        background-color: #3ec7bc;
+        animation: activeTrackerAnimation 310ms 1;
+    }
+}
+
+.fastFadeIn{
+    animation: fastFadeIn 180ms 1;
+}
+.openingActionsContainersAnimation{
+    animation: openingActionsContainers 180ms 1;
+}
+.display_none {
+    display: none;
+}
+@keyframes fastFadeIn {
+    from { height: 0px; opacity: 0; }
+    to { height: auto; opacity: 0;}
+}
+@keyframes openingActionsContainers {
+    from { transform: scale(0.75); opacity: 0.3; }
+    to { transform: scale(1); opacity: 1;}
+}
+@keyframes activeTrackerAnimation {
+    from { height: 0px; }
+    to { height: calc(100% + 1px); }
+}
+@keyframes reservationFocusedAnimation {
+    from { opacity: 0.1;}
+    to {opacity: 1; }
+}
+@keyframes reservationUnfocusedAnimation {
+    from { opacity: 1;}
+    to {opacity: 0.1; }
+}
+@keyframes spinning {
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+@keyframes isDoneAnimation {
+    0%{transform: scale(.8)}
+    70%{transform: scale(1.1)}
+    100%{transform: scale(1)}
+}
+@keyframes isErrorAnimation {
+    0%{transform: translateX( -9px)}
+    100%{transform: translateX( 9px)}
+}
+
+.inactiveTracker{
+    transition: all 180ms;
+    border-left: 3px solid #fff;
+}
+.fixedReservation{
+    transition: all 180ms;
+    position: fixed;
+    top: 20px;
+    margin-top: 0px;
+}
+.rdvBoxStructure{
+    position: sticky;
+    top: 1.5rem;
+    max-height: calc(100vh - 2.5rem);
+}
+.reservationFocused{
+    position: fixed;
+    min-width: 400vh;
+    min-height: 400vh;
+    z-index: 30;
+    top: 0; left: 0;
+
+}
+
+
+.hoursAvailable{
+    display: flex;
+    flex-direction: row;
+    overflow: visible;
+}
+.moreHoursAction{
+    min-width: 100%;
+    position: relative;
+    margin: 0 auto;
+    & .moreHoursActionDivFull{
+        position: absolute;
+        top: -88px;
+        text-align: center;
+        width: 100%;
+    }
+    &::before{
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 110px;
+        top: -110px;
+        background: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 1), transparent);
+        background: linear-gradient(0deg, rgba(255, 255, 255, 1), transparent);
+    }
+}
+.datasStatus{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    left: 0; top: 0;
+    background: rgba(255, 255, 255, .92);
+    & .isLoading{
+        & svg{
+            animation: spinning infinite 1s ;
+        }
+        align-items: center;
+        justify-content: center;
+    }
+    & .isError{
+        & svg{
+            animation: isErrorAnimation infinite 780ms alternate;
+        }
+    }
+    & .isDone{
+        animation: isDoneAnimation 1 700ms;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.indisponible {
+    & a {
+        color: blue;
+    }
+    // text-align: center;
+}
+
+/* MEDIAS Q */
+
+@media (max-width: 768px) {
+    #patternSelectorId{
+        max-width: 335px;
+    }
+    .rdvBoxStructure{
+        // max-width: 358px;
+        // margin-top: -70px;
+        position: fixed; top: 10px; left: 0; right: 0; bottom: 10px;
+        max-width: 360px;
+        margin: 0px auto;
+        border-radius: 0px;
+        max-height: 100%;
+    }
+    .actionsContainersWrapper{
+        max-width: 358px;
+        overscroll-behavior: contain; // Pour éviter le "overscroll" sur mobile 
+    }
+	.activeTracker{
+        &::before{
+            content: "";
+            display: none;
+        }
+    }
+}

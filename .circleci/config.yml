@@ -1,0 +1,45 @@
+version: 2.1
+
+jobs:
+  deploy:
+    docker:
+      - image: cimg/node:22.1.0
+    steps:
+      - checkout
+
+      - run:
+          name: Vérifier la branche
+          command: |
+            if [[ "$CIRCLE_BRANCH" != prod_* ]]; then
+              echo "Cette branche n'est pas une branche de production. Fin du job."
+              circleci step halt
+            fi
+
+      - add_ssh_keys:
+          fingerprints:
+            - ""
+
+      - run:
+          name: Déploiement sur le serveur distant
+          command: |
+            ssh -o StrictHostKeyChecking=no $SSH_USER@$PROD_SERVER \<< EOF
+              cd /home/$SSH_USER/reactBooking
+              git pull origin $CIRCLE_BRANCH
+              docker build -t reactbooking .
+              docker stop reactbooking || true
+              while docker ps -a --format '{{.Names}}' | grep -q '^reactbooking$'; do
+                echo "En attente de l'arrêt complet du conteneur..."
+                sleep 1
+              done
+              docker run -d -p 18004:8080 --name reactbooking --rm reactbooking  
+            EOF
+
+workflows:
+  version: 2
+  deploy-on-prod-branch:
+    jobs:
+      - deploy:
+          filters:
+            branches:
+              only:
+                - /^prod_.*/

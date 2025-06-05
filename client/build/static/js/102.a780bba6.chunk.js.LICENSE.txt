@@ -1,0 +1,21 @@
+/*!
+  @demark-pro/react-booking-calendar v4.0.2-0
+  undefined
+  Released under the MIT License.
+*/
+
+/*! js-cookie v3.0.5 | MIT */
+
+//! Copyright (c) JS Foundation and other contributors
+
+//! github.com/moment/moment-timezone
+
+//! license : MIT
+
+//! moment-timezone.js
+
+//! moment.js
+
+//! moment.js locale configuration
+
+//! version : 0.5.44

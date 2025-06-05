@@ -1,0 +1,11 @@
+# Server dependencies
+node_modules/
+
+# Client dependencies
+/client/node_modules
+
+# Ignore server .env only
+/.env
+
+# Ignore server cert
+/cert/SERVER_account_key.json

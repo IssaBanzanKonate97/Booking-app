@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap&family=Roboto:wght@300;400;500;600;700');
+
+/* === CSS RESETER === */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+
+
+:root{
+    --red-high-clr: #ff5952;
+    --red-medium-clr: #ffa7a3;
+    --red-light-clr: #fff4f4;
+}
+.bg-high-red{
+    background-color: var(--red-high-clr);
+}
+.bg-medium-red{
+    background-color: var(--red-medium-clr);
+}
+.bg-light-red{
+    background-color: var(--red-light-clr) ;
+}
+.text-high-red{
+    color: var(--red-high-clr) ;
+}
+.text-medium-red{
+    color: var(--red-medium-clr) ;
+}
+.text-light-red{
+    color: var(--red-light-clr) ;
+}
+
+
+.montserrat{
+  font-family: "Montserrat";
+}
+.roboto{
+  font-family: "Roboto";
+}
+
+
+
+.left-border{
+    position: absolute;
+    left: 0; top: 0;
+    height: 100%; width: 3px;
+}
+
+.forceNoMargin{
+	margin: 0 !important;
+}
+
+.topStickyElement{
+    position: sticky;
+    top: 0;
+}
+
+.maxTabSize{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.cardTitle{
+	font-family: "Montserrat";
+	font-size: 16px;
+	line-height: 21px;
+	margin-bottom: 16px;
+	font-weight: 500;
+}
+.cardIcon{
+	min-width: 52px;
+	text-align: center;
+}
+.rightBoxShift{
+	padding-right: 52px;
+}
+.insetInfosContainer{
+    min-width: 50%;
+}
+.maxPannelSize{
+	max-width: 50%;
+}
+
+#root{
+	position: relative;
+}
+
+.getNewReservation{
+	position: fixed;
+	bottom: 1.5em;
+	border-radius: 3px;
+	animation: getNewReservation 1.2s 1;
+}
+
+.arrowRightAnimation{
+	animation: arrowRightAnimation 700ms infinite alternate;
+}
+
+@keyframes getNewReservation {
+	from {
+		transform: translateY(150px);
+	} to {
+		transform: translateY(0px);
+	}
+}
+
+@keyframes arrowRightAnimation {
+	from{
+		transform: translateX(0px);
+	} to {
+		transform: translateX(9px);
+	}
+}
+
+
+@media (max-width: 768px) {
+	.sideInformationsContainer{
+		width: 100%;
+		max-width: 100%;
+	}
+	.cardIcon{
+		min-width: 46px;
+	}
+}
